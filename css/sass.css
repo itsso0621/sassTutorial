@@ -1,0 +1,99 @@
+/* line 3, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/_reset.scss */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* STEP 1: Variables */
+/* line 9, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+body {
+  font: 100%/1.4 Helvetica, Arial, sans-serif;
+  color: darkgrey;
+  margin: 1em;
+}
+
+/* STEP 2: Nesting CSS selectors */
+/* line 17, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+header h1 {
+  color: #265e70;
+}
+
+/* line 20, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+header p {
+  text-transform: uppercase;
+}
+
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+/* STEP 4: Mixins */
+/* line 35, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+header {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background-color: lightgrey;
+  padding: 1em;
+}
+
+/* line 41, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+footer {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background-color: lightgrey;
+  padding: 1em;
+}
+
+/* STEP 5: Extend/Inheritance */
+/* line 48, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+.message, .success, .error, .warning {
+  border: 2px solid #ccc;
+  padding: 1em;
+  color: #333;
+  font-weight: bold;
+  background-color: lightgrey;
+}
+
+/* line 59, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+.success {
+  background-color: #d4f7d4;
+}
+
+/* line 64, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+.error {
+  background-color: #ffbbc6;
+}
+
+/* line 69, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+.warning {
+  background-color: #ffca37;
+}
+
+/* STEP 5: Operators */
+/* line 75, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+main > section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* line 81, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+main > section > article {
+  flex-basis: 62.5%;
+}
+
+/* line 85, ../../../../../../../../../../../../../Users/soyounglee/Desktop/OneDrive - Georgian College/GeorgianCollege/semester3/CSS/lesson-12-files-start/scss/sass.scss */
+main > section > aside {
+  flex-basis: 31.25%;
+}
+
+/* http://sass-lang.com/guide */
+
+/*# sourceMappingURL=sass.css.map */

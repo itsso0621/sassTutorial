@@ -1,0 +1,89 @@
+@import "reset";
+
+/* STEP 1: Variables */
+$font-stack: Helvetica, Arial, sans-serif;
+$primary-color: darkgrey;
+$secondary-color: rgb(38, 94, 112);
+$background-color: lightgrey;
+$whitespace: 1em;
+body {
+  font: 100%/1.4 $font-stack;
+  color: $primary-color;
+  margin: $whitespace;
+}
+
+/* STEP 2: Nesting CSS selectors */
+header {
+  h1 {
+    color: $secondary-color;
+  }
+  p {
+    text-transform: uppercase;
+  }
+}
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+
+/* STEP 4: Mixins */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+header {
+  @include border-radius(20px);
+  background-color: $background-color;
+  padding: $whitespace;
+}
+
+footer {
+  @include border-radius(20px);
+  background-color: $background-color;
+  padding: $whitespace;
+}
+
+/* STEP 5: Extend/Inheritance */
+%message-shared {
+  border: 2px solid #ccc;
+  padding: $whitespace;
+  color: #333;
+  font-weight: bold;
+  background-color: $background-color;
+}
+
+.message {
+  @extend %message-shared;
+}
+.success {
+  @extend %message-shared;
+  background-color: rgb(212, 247, 212);
+}
+
+.error {
+  @extend %message-shared;
+  background-color: rgb(255, 187, 198);
+}
+
+.warning {
+  @extend %message-shared;
+  background-color: rgb(255, 202, 55);
+}
+
+/* STEP 5: Operators */
+main > section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+main > section > article {
+  flex-basis: 600px / 960px * 100%;
+}
+
+main > section > aside {
+  flex-basis: 300px / 960px * 100%;
+}
+
+/* http://sass-lang.com/guide */
